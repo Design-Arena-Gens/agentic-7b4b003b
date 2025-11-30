@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-black: #0a0a0f;
+  --color-cyber-dark: #13131a;
+  --color-cyber-gray: #1a1a24;
+  --color-neon-cyan: #00fff9;
+  --color-neon-purple: #bf00ff;
+  --color-neon-blue: #0066ff;
+  --color-neon-pink: #ff006e;
+  --color-text-primary: #e5e5e5;
+  --color-text-secondary: #a0a0a0;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0f;
+  color: #e5e5e5;
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(26, 26, 36, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(26, 26, 36, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 255, 249, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #13131a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00fff9, #bf00ff);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #bf00ff, #00fff9);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 255, 249, 0.3);
+  color: #fff;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #00fff9, #bf00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
